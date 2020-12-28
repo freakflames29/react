@@ -1,23 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+// import Header from "./components/header";
+import  {Button} from "reactstrap";
+import {ToastContainer,toast} from "react-toastify";
 
 function App() {
+    // function notify()
+    // {
+    //       toast("Wow easy!");
+    // }
+    const notify=()=>{toast.dark("This  is my message")}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        {/*<Header name="sourav Das" ti={"Header"} para={"React is awesome"}/>*/}
+        {/*<hr/>*/}
+        {/*<h1>This is heading</h1>*/}
+        {/*<p>this is paragraph</p>*/}
+        {/*<hr/>*/}
+        {/*<Header name="Toton" ti={"Footer"} para={"I am learning react"}/>*/}
+             <ToastContainer
+
+            position={"bottom-center"}
+            type={"dark"}
+
+             />
+            <h1>this is a simple heading</h1>
+            <Button color="success" outline  size={"lg"} onClick={notify}>button</Button>
+
+
     </div>
   );
 }
